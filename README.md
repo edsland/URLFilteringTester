@@ -3,4 +3,11 @@ Simple script to run on endpoint to test Secure Web Gateway URL filtering capabi
 
 To get started run the script as a cron job.
 
-E.g */15 * * * * /usr/bin/python3 /path/to/fetch_urls.py >> /path/to/fetch.log 2>&1
+Update Crontab with the following job - runs every 15mins:
+
+```
+crontab -e
+```
+```
+*/15 * * * * (cd ~/URLFilteringTester; /usr/bin/python3 fetch_urls.py)
+```
